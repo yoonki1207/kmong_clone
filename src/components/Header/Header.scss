@@ -13,6 +13,9 @@ input {
   border-radius: 10000px;
   outline: 0;
   border: none;
+  &::placeholder{
+    color: #cccccc;
+  }
 }
 
 .header_profile {

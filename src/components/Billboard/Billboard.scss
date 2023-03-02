@@ -67,6 +67,22 @@
   animation-iteration-count: infinite;
 }
 
+.billboard_tag_container {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.billboard_tag {
+  border-radius: 10000px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 0.875rem;
+  padding: 0.125rem 0.5rem;
+  margin-right: 1rem;
+}
+
 .billboard_right {
   position: relative;
   margin: 0 2rem;

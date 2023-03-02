@@ -1,0 +1,32 @@
+.main_section_container {
+  width: 1200px;
+  margin: 10rem auto;
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+.section_service_item_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.section_service_img_container {
+  position: relative;
+  width: 212px;
+  height: 160px;
+  border: 1px solid #eeeeee;
+  border-radius: 4px;
+  overflow: hidden;
+  &>div {
+    position: absolute;
+    display: flex;
+  }
+}
+
+.section_service_item {
+  width: fit-content;
+  width: 212px;
+}
