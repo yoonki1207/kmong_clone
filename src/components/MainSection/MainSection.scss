@@ -7,10 +7,61 @@
   }
 }
 
+.section_service_container {
+  cursor: pointer;
+  .author {
+    font-size: 0.75rem;
+    color: #aaa;
+    padding: 0.5rem 0;
+
+    span {
+      position: relative;
+      font-size: 0.625rem;
+      background-color: #66c2ff;
+      color: blue;
+      padding: 0.125rem 0.25rem;
+      border-radius: 2px;
+      margin-right: 4px;
+      .tooltip {
+        display: none;
+        position: absolute;
+        background-color: #777777;
+        color: white;
+        width: 135px;
+        padding: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: bold;
+        left: -60.5px;
+        top: -75px;
+      }
+      &:hover .tooltip{
+        display: block;
+      }
+    }
+  }
+
+  .title {
+    font-size: 0.875rem;
+    font-weight: bold;
+  }
+
+  .price {
+    font-size: 1.25rem;
+    text-align: right;
+    font-weight: bold;
+  }
+}
+
 .section_service_item_container {
   width: 100%;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.section_service_item {
+  width: fit-content;
+  width: 212px;
+  padding-bottom: 2rem;
 }
 
 .section_service_img_container {
@@ -20,13 +71,66 @@
   border: 1px solid #eeeeee;
   border-radius: 4px;
   overflow: hidden;
+  .img_list {
+    transition: 0.2s ease-in-out all;
+  }
   &>div {
     position: absolute;
     display: flex;
   }
+  .dots {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 60px;
+    left: calc(50% - 30px);
+    bottom: 5px;
+    .small {
+      width: 10px;
+      height: 10px;
+      border-radius: 1000px;
+      border: 1px solid black;
+    }
+    .filled {
+      background-color: rgba(71, 31, 104, 0.2);
+    }
+  }
+  .icon_left, .icon_right{
+    cursor: pointer;
+    position: absolute;
+    outline: none;
+    border: none;
+    border-radius: 1000px;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: 0.2s ease-in-out background-color;
+    width: 24px;
+    height: 24px;
+    padding: 0;
+    top: calc(50% - 12px);
+    * {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+  }
+  &:hover .icon_left, &:hover .icon_right {
+    background-color: rgba(0, 0, 0, 0.1);
+  }
+  .icon_left{
+    left: 4px;
+  }
+  .icon_right{
+    right: 4px;
+  }
 }
 
-.section_service_item {
-  width: fit-content;
-  width: 212px;
+.liked_icon {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem; 
+  cursor: pointer;
+  * {
+    color: #777777;
+  }
 }
